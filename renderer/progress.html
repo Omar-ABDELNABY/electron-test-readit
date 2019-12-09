@@ -13,7 +13,7 @@
         setInterval(()=>{
             let progress = ipcRenderer.sendSync('download-progress-request');
 
-            document.getElementsById('progress-bar').value = progress;
+            document.getElementById('progress-bar').value = progress;
         },1000);
     </script>
   </body>
