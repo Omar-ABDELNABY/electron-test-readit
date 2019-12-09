@@ -1,6 +1,6 @@
 {
   "name": "myReadit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Master Electron Course Code",
   "main": "main.js",
   "scripts": {
