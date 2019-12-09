@@ -1,5 +1,5 @@
 {
-  "name": "master-electron",
+  "name": "myReadit",
   "version": "1.0.0",
   "description": "Master Electron Course Code",
   "main": "main.js",
@@ -7,7 +7,10 @@
     "start": "electron .",
     "watch": "nodemon --watch * --exec 'electron .'",
     "reset": "git reset --hard",
-    "inspect": "electron --inspect=5858 ."
+    "inspect": "electron --inspect=5858 .",
+    "create-cert": "electron-builder create-self-signed-cert -p omar",
+    "set-GH_TOKEN":"$env:GH_TOKEN= <token inside double quotes>",
+    "release-win": "electron-builder build -w -p 'onTagOrDraft'"
   },
   "repository": "https://github.com/stackacademytv/master-electron",
   "keywords": [
@@ -24,5 +27,14 @@
   },
   "dependencies": {
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.readit.app",
+    "win": {
+      "certificateFile": "private/omar.pfx",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "omar",
+      "publish": [ "github" ]
+    }
   }
 }

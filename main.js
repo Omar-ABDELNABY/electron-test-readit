@@ -27,8 +27,9 @@ function createWindow () {
     x: state.x, y: state.y,
     width: state.width, height: state.height,
     minWidth: 350, minHeight: 300,
-    // maxWidth: 650,
-    webPreferences: { nodeIntegration: true }
+    maxWidth: 650,
+    webPreferences: { nodeIntegration: true },
+    icon: `${__dirname}/build/icon.png`
   })
 
   state.manage(mainWindow);
@@ -37,7 +38,7 @@ function createWindow () {
   mainWindow.loadFile('renderer/main.html')
 
   // Open DevTools - Remove for PRODUCTION!
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Listen for window being closed
   mainWindow.on('closed',  () => {
