@@ -1,6 +1,6 @@
 {
   "name": "myReadit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Master Electron Course Code",
   "main": "main.js",
   "scripts": {
@@ -34,7 +34,10 @@
       "certificateFile": "private/omar.pfx",
       "verifyUpdateCodeSignature": false,
       "publisherName": "omar",
-      "publish": [ "github" ]
+      "publish": {
+        "provider": "github",
+        "releaseType": "release"
+      }
     }
   }
 }
