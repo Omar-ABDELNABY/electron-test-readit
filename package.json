@@ -1,6 +1,6 @@
 {
-  "name": "myReadit",
-  "version": "1.0.2",
+  "name": "myreadit",
+  "version": "1.0.3",
   "description": "Master Electron Course Code",
   "main": "main.js",
   "scripts": {
@@ -9,16 +9,16 @@
     "reset": "git reset --hard",
     "inspect": "electron --inspect=5858 .",
     "create-cert": "electron-builder create-self-signed-cert -p omar",
-    "set-GH_TOKEN":"$env:GH_TOKEN= <token inside double quotes>",
+    "set-GH_TOKEN": "$env:GH_TOKEN= <token inside double quotes>",
     "release-win": "electron-builder build -w -p onTagOrDraft"
   },
-  "repository": "https://github.com/stackacademytv/master-electron",
+  "repository": "git@github.com:Omar-ABDELNABY/electron-test-readit.git",
   "keywords": [
     "Electron",
     "Master Electron",
     "demo"
   ],
-  "author": "GitHub, Stackacademytv",
+  "author": "GitHub, omar",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^5.0.10",
@@ -26,10 +26,12 @@
     "nodemon": "^1.19.2"
   },
   "dependencies": {
+    "electron-log": "^4.0.0",
+    "electron-updater": "^4.2.0",
     "electron-window-state": "^5.0.3"
   },
   "build": {
-    "appId": "com.readit.app",
+    "appId": "com.myreadit.app",
     "win": {
       "certificateFile": "private/omar.pfx",
       "verifyUpdateCodeSignature": false,
