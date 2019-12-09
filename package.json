@@ -10,7 +10,7 @@
     "inspect": "electron --inspect=5858 .",
     "create-cert": "electron-builder create-self-signed-cert -p omar",
     "set-GH_TOKEN":"$env:GH_TOKEN= <token inside double quotes>",
-    "release-win": "electron-builder build -w -p 'onTagOrDraft'"
+    "release-win": "electron-builder build -w -p onTagOrDraft"
   },
   "repository": "https://github.com/stackacademytv/master-electron",
   "keywords": [
